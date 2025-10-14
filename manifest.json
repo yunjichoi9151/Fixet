@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Fixet",
+  "version": "1.0.0",
+  "description": "백준(BOJ)·SWEA 코드 붙여넣기 시 자동으로 제출 형식에 맞게 수정해주는 크롬 확장프로그램",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.acmicpc.net/*",
+        "https://swexpertacademy.com/*"
+      ],
+      "js": ["inject.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "common/utils.js",
+        "page/boj.page.js",
+        "page/swea.page.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

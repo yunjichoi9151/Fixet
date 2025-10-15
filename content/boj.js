@@ -32,7 +32,6 @@
     }, 0);
   }
 
-  // 붙여넣기 리스너 1회만 연결
   let tries = 0;
   (function boot() {
     if (window.ACF.attachPasteOnce("__boj_paste_bound__", onPaste)) return;

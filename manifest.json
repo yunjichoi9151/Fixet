@@ -3,13 +3,29 @@
   "name": "Fixet",
   "version": "1.0.0",
   "description": "백준(BOJ)·SWEA 코드 붙여넣기 시 자동으로 제출 형식에 맞게 수정해주는 크롬 확장프로그램",
+  "action": {
+    "default_popup": "ui/popup.html",
+    "default_title": "Fixet",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png"
+    }
+  },
+  "icons": {
+    "16":  "assets/icon-16.png",
+    "24":  "assets/icon-24.png",
+    "32":  "assets/icon-32.png",
+    "48":  "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "permissions": ["storage", "tabs"],
   "content_scripts": [
     {
       "matches": [
         "https://www.acmicpc.net/*",
         "https://swexpertacademy.com/*"
       ],
-      "js": ["inject.js"],
+      "js": ["content/inject.js"],
       "run_at": "document_idle",
       "all_frames": true
     }

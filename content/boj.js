@@ -1,15 +1,18 @@
 (function () {
   function detectLang() {
-    const span = document.querySelector("#language_chosen .chosen-single > span");
+    const span = document.querySelector('#language_chosen .chosen-single > span');
     if (!span) return null;
     const t = span.textContent.toLowerCase();
-    if (t.includes("java")) return "java";
-    if (t.includes("node") || t.includes("typescript")) return "javascript";
+    if (t.includes('java')) return 'java';
+    if (t.includes('node') || t.includes('typescript')) return 'javascript';
     return null;
   }
 
   function onPaste() {
     setTimeout(() => {
+      const on = document.documentElement.getAttribute('data-fixet-enabled') === 'true';
+      if (!on) return;
+
       const cm = window.ACF.getCM();
       if (!cm) return;
 
@@ -19,9 +22,9 @@
       const before = cm.getValue();
       let after = before;
 
-      if (lang === "java") {
-        after = window.ACF.fixJava(before, "Main");
-      } else if (lang === "javascript") {
+      if (lang === 'java') {
+        after = window.ACF.fixJava(before, 'Main');
+      } else if (lang === 'javascript') {
         after = window.ACF.fixJS(before);
       }
 
@@ -34,7 +37,7 @@
 
   let tries = 0;
   (function boot() {
-    if (window.ACF.attachPasteOnce("__boj_paste_bound__", onPaste)) return;
+    if (window.ACF.attachPasteOnce('__boj_paste_bound__', onPaste)) return;
     if (++tries < 10) setTimeout(boot, 200);
   })();
 })();

@@ -12,19 +12,16 @@
     }
   },
   "icons": {
-    "16":  "assets/icon-16.png",
-    "24":  "assets/icon-24.png",
-    "32":  "assets/icon-32.png",
-    "48":  "assets/icon-48.png",
+    "16": "assets/icon-16.png",
+    "24": "assets/icon-24.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
     "128": "assets/icon-128.png"
   },
   "permissions": ["storage", "tabs"],
   "content_scripts": [
     {
-      "matches": [
-        "https://www.acmicpc.net/*",
-        "https://swexpertacademy.com/*"
-      ],
+      "matches": ["https://www.acmicpc.net/*", "https://swexpertacademy.com/*"],
       "js": ["content/inject.js"],
       "run_at": "document_idle",
       "all_frames": true
@@ -32,11 +29,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "common/utils.js",
-        "page/boj.page.js",
-        "page/swea.page.js"
-      ],
+      "resources": ["lib/utils.js", "content/boj.js", "content/swea.js"],
       "matches": ["<all_urls>"]
     }
   ]

@@ -4,9 +4,9 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 > **Fixet**은 백준(BOJ)과 SWEA에서 코드를 붙여넣을 때  
-> 자동으로 제출 형식에 맞게 변환해주는 **크롬 확장 프로그램**입니다.  
->  
-> 매번 `public class Main`이나 `readFileSync('/dev/stdin')`으로 수정하던 반복 작업을 **Fixet**이 자동으로 처리해줍니다 🚀  
+> 자동으로 제출 형식에 맞게 변환해주는 **크롬 확장 프로그램**입니다.
+>
+> 매번 `public class Main`이나 `readFileSync('/dev/stdin')`으로 수정하던 반복 작업을 **Fixet**이 자동으로 처리해줍니다 🚀
 
 ---
 
@@ -15,6 +15,7 @@
 ### 🥇 BOJ — Java
 
 **적용 전**
+
 ```java
 package boj;
 
@@ -26,6 +27,7 @@ public class Solution_2557 {
 ```
 
 **적용 후**
+
 ```java
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -37,6 +39,7 @@ public class Main {
 ### ⚡ BOJ — Node.js(JavaScript) / TypeScript
 
 **적용 전**
+
 ```javascript
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split('\n');
@@ -44,14 +47,17 @@ console.log(input);
 ```
 
 **적용 후**
+
 ```javascript
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 console.log(input);
 ```
+
 ### 🧠 SWEA — Java
 
 **적용 전**
+
 ```java
 package swea1234;
 
@@ -63,6 +69,7 @@ public class TestCase {
 ```
 
 **적용 후**
+
 ```java
 public class Solution {
     public static void main(String[] args) {
@@ -70,6 +77,7 @@ public class Solution {
     }
 }
 ```
+
 ## ✨ 특징
 
 - 사이트 자동 인식 — 백준(acmicpc.net), SWEA(swexpertacademy.com)

@@ -1,7 +1,7 @@
 (async function () {
   const $toggle = document.getElementById('toggle');
   const $switch = document.getElementById('switch');
-  const $state = document.getElementById('state');
+  // const $state = document.getElementById('state');
 
   const $linkIssues = document.getElementById('linkIssues');
   const $btnGithub = document.getElementById('btnGithub');
@@ -24,7 +24,7 @@
   function renderUI(on) {
     $toggle.setAttribute('aria-checked', on ? 'true' : 'false');
     $switch.classList.toggle('on', !!on);
-    $state.textContent = on ? 'ON' : 'OFF';
+    // $state.textContent = on ? 'ON' : 'OFF';
   }
 
   async function render(on) {

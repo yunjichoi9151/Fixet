@@ -150,20 +150,24 @@
     </style>
   </head>
   <body>
+    <!-- 로고 및 설명 -->
     <div class="logo">
       <img src="../assets/icon-32.png" alt="Fixet logo" />
       <div class="title">Fixet <span class="hint">BOJ·SWEA 자동 제출 형식 보정</span></div>
     </div>
 
+    <!-- 사용 여부 토글 -->
     <div id="toggle" class="toggle" role="switch" aria-checked="false" tabindex="0">
       <span class="label">사용</span>
       <div id="switch" class="switch" aria-hidden="true"></div>
     </div>
 
     <div class="footer">
+      <!-- 오류 신고 링크 -->
       <a href="#" id="linkIssues" class="link" title="Report an issue on GitHub"> 오류 신고 </a>
 
       <div class="icons">
+        <!-- GitHub 버튼 -->
         <button
           id="btnGithub"
           class="iconbtn"
@@ -178,10 +182,12 @@
           </svg>
         </button>
 
+        <!-- 홈페이지 버튼 -->
         <!-- <button id="btnHome" class="iconbtn" title="Open Fixet page" aria-label="Home">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 2 12h2v8a1 1 0 0 0 1 1h5v-6h4v6h5a1 1 0 0 0 1-1v-8h2L12 3.2z"/></svg>
         </button> -->
 
+        <!-- Gmail 버튼 -->
         <button id="btnMail" class="iconbtn" title="Send email" type="button" aria-label="Email">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
@@ -190,10 +196,8 @@
           </svg>
         </button>
       </div>
-
-      <span class="state" id="state"></span>
+      <!-- <span class="state" id="state"></span> -->
     </div>
-
     <script src="popup.js"></script>
   </body>
 </html>

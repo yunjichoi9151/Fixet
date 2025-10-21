@@ -13,12 +13,16 @@
   // const HOME_URL   = chrome.runtime.getURL("pages/index.html");
   const FEEDBACK_TO = 'cyjcode99@gmail.com';
 
+  function openInNewTab(url) {
+    window.open(url, '_blank', 'noopener');
+  }
+
   function openGmail({ to, subject, body }) {
     const enc = encodeURIComponent;
     const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${enc(to)}&su=${enc(
       subject
     )}&body=${enc(body)}`;
-    chrome.tabs.create({ url });
+    openInNewTab(url);
   }
 
   function renderUI(on) {
@@ -65,11 +69,11 @@
 
   $linkIssues.addEventListener('click', (e) => {
     e.preventDefault();
-    chrome.tabs.create({ url: ISSUES_URL });
+    openInNewTab(ISSUES_URL);
   });
 
-  $btnGithub.addEventListener('click', () => chrome.tabs.create({ url: REPO_URL }));
-  // $btnHome?.addEventListener("click",   () => chrome.tabs.create({ url: HOME_URL }));
+  $btnGithub.addEventListener('click', () => openInNewTab(REPO_URL));
+  // $btnHome?.addEventListener("click",   () => openInNewTab(HOME_URL));
 
   $btnMail?.addEventListener('click', () => {
     const subject = '[Fixet] 문의 드립니다';

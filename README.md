@@ -1,6 +1,6 @@
 # 🧩 Fixet — 백준(BOJ) · SWEA 코드 자동 수정기
 
-![Chrome Extension](https://img.shields.io/badge/Chrome%20Extension-Fixet-4285F4?logo=googlechrome&logoColor=white)
+[![Chrome Extension](https://img.shields.io/badge/Chrome%20Extension-Fixet-4285F4?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/fixet/habiknhkejeachgjmlbiidjejajjmean)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 > **Fixet**은 백준(BOJ)과 SWEA에서 코드를 붙여넣을 때  
